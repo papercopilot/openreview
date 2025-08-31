@@ -138446,7 +138446,7 @@
             0
         ],
         "replies_avg": [
-            7,
+            6,
             0
         ],
         "authors#_avg": [
@@ -184022,7 +184022,7 @@
             2.1213203435596424
         ],
         "replies_avg": [
-            39,
+            40,
             0
         ],
         "authors#_avg": [
@@ -187262,7 +187262,7 @@
             2.5860201081971503
         ],
         "replies_avg": [
-            61,
+            62,
             0
         ],
         "authors#_avg": [
@@ -196982,7 +196982,7 @@
             0.7483314773547882
         ],
         "replies_avg": [
-            24,
+            25,
             0
         ],
         "authors#_avg": [
@@ -213074,7 +213074,7 @@
             1.5
         ],
         "replies_avg": [
-            31,
+            33,
             0
         ],
         "authors#_avg": [
@@ -229395,7 +229395,7 @@
         "id": "BWMZKHTA9M",
         "title": "Suppressing recency bias through implicit task in task-agnostic continual adaptation for foundation language models",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "Foundation language models have significantly advanced natural language processing but face challenges such as catastrophic forgetting when adapting to dynamic environments with diverse tasks. Recently, among the continual learning (CL) methods for these models, model architecture expansion methods have been spotlighted due to the growth of parameter-efficient fine-tuning (PEFT) methods. However, these methods need to store past PEFT adapters for each task and require task identifiers (task IDs) to distinguish each task, thus limiting their applicability in task-agnostic settings. They also overlook recency bias, where models focus overly on current tasks at the expense of past knowledge. \nTo address these issues, we propose suppressing recency bias (SRB) by using the concept of implicit tasks. SRB assigns a fixed-size adapter to an implicit task, recursively storing historical knowledge through arithmetic operations with current adapters at every time step instead of task IDs. This arithmetic mitigates recency bias by integrating non-overlapping information between historical and current adapters. \nOur approach requires only simple arithmetic operations without backpropagation, minimizing additional computation, and allocates a fixed-size adapter to the implicit task, resulting in low memory requirements. We evaluate SRB on CL benchmarks for foundational LMs. Experimental results demonstrate that SRB outperforms state-of-the-art methods, achieving superior generalization performance across various task sequences and models by effectively mitigating recency bias.",
         "keywords": "continual learning;lifelong learning;transfer learning;foundation language models",
@@ -229490,7 +229490,7 @@
             0.3726779962499649
         ],
         "replies_avg": [
-            25,
+            26,
             0
         ],
         "authors#_avg": [
@@ -234273,7 +234273,7 @@
         "aff": ";Technische Universit\u00e4t M\u00fcnchen;Technische Universit\u00e4t M\u00fcnchen;;Technische Universit\u00e4t M\u00fcnchen",
         "aff_domain": ";tum.de;tum.edu;;tum.de",
         "position": ";Researcher;Researcher;;Researcher",
-        "bibtex": "@misc{\nzheng2024temporalaware,\ntitle={Temporal-Aware Test-Time Training via Self-Distillation for One-Shot Image-to-Video Segmentation},\nauthor={Zixuan Zheng and Yilei Shi and Jingliang Hu and Xiao Xiang Zhu and Lichao Mou},\nyear={2024},\nurl={https://openreview.net/forum?id=BhECSDSkAE}\n}",
+        "bibtex": "@misc{\nzheng2024temporalaware,\ntitle={Temporal-Aware Test-Time Training via Self-Distillation for One-Shot Image-to-Video Segmentation},\nauthor={Qicong Wang and Yilei Shi and Jingliang Hu and Xiao Xiang Zhu and Lichao Mou},\nyear={2024},\nurl={https://openreview.net/forum?id=BhECSDSkAE}\n}",
         "github": "",
         "project": "",
         "reviewers": "6Uad;L3oX;35mV",
@@ -270206,7 +270206,7 @@
             0.7071067811865476
         ],
         "replies_avg": [
-            19,
+            21,
             0
         ],
         "authors#_avg": [
@@ -297759,7 +297759,7 @@
         "id": "EhSUM1FcJw",
         "title": "ConceptFlow: Unified Framework for Personalized Image Generation",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "Personalized image generation is an appealing area of research within controllable image generation due to its diverse potential applications. Despite notable advancements, generating images based on single or multiple concepts remains challenging. For single-concept generation, it is difficult to strike a balance between identity preservation and prompt alignment, especially in complex prompts. When it comes to multiple concepts, creating images from a single prompt without extra conditions, such as layout boxes or semantic masks, is problematic due to significantly identity loss and concept omission. In this paper, we introduce ConceptFlow, a comprehensive framework designed to tackle these challenges. Specifically, we propose ConceptFlow-S and ConceptFlow-M for single-concept generation and multiple-concept generation, respectively. ConceptFlow-S introduces a KronA-WED adapter, which integrates a Kronecker adapter with weight and embedding decomposition, and employs a disentangled learning approach with a novel attention regularization objective to enhance single-concept generation. On the other hand, ConceptFlow-M leverages models learned from ConceptFlow-S to directly generate multi-concept images without needed of additional conditions, proposing Subject-Adaptive Matching Attention (SAMA) module and layout consistency guidance strategy. Our extensive experiments and user study show that ConceptFlow effectively addresses the aforementioned issues, enabling its application in various real-world scenarios such as advertising and garment try-on.",
         "keywords": "Personalized Image Generation;Visual Guidance",
@@ -297854,7 +297854,7 @@
             1.118033988749895
         ],
         "replies_avg": [
-            26,
+            27,
             0
         ],
         "authors#_avg": [
@@ -298718,7 +298718,7 @@
             1.479019945774904
         ],
         "replies_avg": [
-            23,
+            28,
             0
         ],
         "authors#_avg": [
@@ -301958,7 +301958,7 @@
             0.4330127018922193
         ],
         "replies_avg": [
-            19,
+            23,
             0
         ],
         "authors#_avg": [
@@ -310922,7 +310922,7 @@
             1.0897247358851685
         ],
         "replies_avg": [
-            19,
+            21,
             0
         ],
         "authors#_avg": [
@@ -331118,7 +331118,7 @@
             0.4714045207910317
         ],
         "replies_avg": [
-            12,
+            14,
             0
         ],
         "authors#_avg": [
@@ -350666,7 +350666,7 @@
             1.5811388300841898
         ],
         "replies_avg": [
-            29,
+            30,
             0
         ],
         "authors#_avg": [
@@ -368823,7 +368823,7 @@
         "id": "IAfGax4tVT",
         "title": "Multi-Marginal Stochastic Flow Matching for Alignment of High-Dimensional Snapshot Data at Irregular Time Points",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "Modeling the evolution of high-dimensional systems from limited snapshot observations at irregular time points poses a significant challenge in quantitative biology and related fields. Traditional approaches often rely on dimensionality reduction techniques, which can oversimplify the dynamics and fail to capture critical transient behaviors in non-equilibrium systems. We present Multi-Marginal Stochastic Flow Matching (MMSFM), a novel extension of simulation-free score and flow matching methods to the multi-marginal setting, enabling the alignment of high-dimensional data measured at non-equidistant time points without reducing dimensionality. The use of measure-valued splines enhances robustness to irregular snapshot timing, and score matching prevents overfitting in high-dimensional spaces. We validate our framework on several synthetic and benchmark datasets and apply it to single-cell perturbation data from melanoma cell lines and gene expression data collected at uneven time points.",
         "keywords": "Multi-marginal Snapshot data flow matching;Measure-valued spline interpolation;Single-cell data;Optimal Transport",
@@ -368918,7 +368918,7 @@
             0.4330127018922193
         ],
         "replies_avg": [
-            19,
+            20,
             0
         ],
         "authors#_avg": [
@@ -369566,7 +369566,7 @@
             2.345207879911715
         ],
         "replies_avg": [
-            24,
+            26,
             0
         ],
         "authors#_avg": [
@@ -377463,7 +377463,7 @@
         "id": "IaHzYWSFYY",
         "title": "RootTracker: A Lightweight Framework to Trace Original Models of Fine-tuned LLMs in Black-Box Conditions",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "Large Language Models (LLMs) demonstrate remarkable performance in various applications, yet their training demands extensive resources and time. Consequently, fine-tuning pre-trained LLMs has become a prevalent strategy for adapting these models to diverse downstream tasks, thereby reducing costs. Despite their benefits, LLMs have vulnerabilities, such as susceptibility to adversarial attacks, potential for jailbreaking, fairness issues, backdoor vulnerabilities, and the risk of generating inappropriate or harmful content. Since fine-tuned models inherit some characteristics from their original models, they may also inherit these issues and vulnerabilities. In this work, we propose a lightweight framework, RootTracker, specifically designed to trace the original models of fine-tuned LLMs. The core idea is to identify a set of prompts that can assess which pre-trained LLM a fine-tuned model most closely resembles. This process is conducted in a ''knockout tournament\" style, where the model is repeatedly tested against pairs of LLMs until the original pre-trained model is identified. To evaluate the effectiveness of our framework, we created 200 distinct fine-tuned models, derived from original models including GPT-Neo, GPT-2, TinyLlama, and Pythia. The results demonstrate that our framework accurately identified the original models for 85.7\\% of the fine-tuned versions. Therefore, we advocate for timely updates to model versions or deliberate obfuscation of model types when deploying large models.",
         "keywords": "Large language models;Fine-tune;Framework;Black-box;Fairness;Safety",
@@ -377558,7 +377558,7 @@
             0.0
         ],
         "replies_avg": [
-            11,
+            12,
             0
         ],
         "authors#_avg": [
@@ -393357,7 +393357,7 @@
         "aff": "University of Genoa;University of Genoa;University of Cagliari;;University of Cagliari, Italy;Ca' Foscari University of Venice",
         "aff_domain": "unige.it;unige.it;unica.it;;unica.it;unive.it",
         "position": "Assistant Professor;PhD student;Assistant Professor;;Full Professor;Professor",
-        "bibtex": "@inproceedings{\ncina2025sigmazero,\ntitle={\\${\\textbackslash}sigma\\$-zero: Gradient-based Optimization of \\${\\textbackslash}ell\\_0\\$-norm Adversarial Examples},\nauthor={Antonio Emanuele Cin{\\`a} and Francesco Villani and Maura Pintor and Lea Sch{\\\"o}nherr and Battista Biggio and Marcello Pelillo},\nbooktitle={The Thirteenth International Conference on Learning Representations},\nyear={2025},\nurl={https://openreview.net/forum?id=JMPOqoe4tl}\n}",
+        "bibtex": "@inproceedings{\ncina2025sigmazero,\ntitle={$\\sigma$-zero: Gradient-based Optimization of $\\ell_0$-norm Adversarial Examples},\nauthor={Antonio Emanuele Cin{\\`a} and Francesco Villani and Maura Pintor and Lea Sch{\\\"o}nherr and Battista Biggio and Marcello Pelillo},\nbooktitle={The Thirteenth International Conference on Learning Representations},\nyear={2025},\nurl={https://openreview.net/forum?id=JMPOqoe4tl}\n}",
         "github": "",
         "project": "",
         "reviewers": "xCu7;L1s2;fo9d;xveC",
@@ -435369,7 +435369,7 @@
         "aff": "Zhejiang University;Zhejiang University;Zhejiang University;Zhejiang University;Zhejiang University;Zhejiang University;Huawei Noah's Ark Lab;;Zhejiang University;Zhejiang University;",
         "aff_domain": "zju.edu.cn;zju.edu.cn;zju.edu.cn;zju.edu.cn;zju.edu.cn;zju.edu.cn;huawei.com;;zju.edu.cn;zju.edu.cn;",
         "position": "MS student;PhD student;PhD student;MS student;MS student;MS student;Researcher;;MS student;PhD student;",
-        "bibtex": "@misc{\nhuang2024advancing,\ntitle={Advancing Multimodal Unified Discrete Representations},\nauthor={Hai Huang and Yan Xia and Shengpeng Ji and Shulei Wang and Hanting Wang and Minghui Fang and Jieming Zhu and Zhenhua Dong and Sashuai zhou and Zehan Wang and Zhou Zhao},\nyear={2024},\nurl={https://openreview.net/forum?id=LRifwkqJEW}\n}",
+        "bibtex": "@misc{\nhuang2024advancing,\ntitle={Advancing Multimodal Unified Discrete Representations},\nauthor={Hai Huang and Yan Xia and Shengpeng Ji and Shulei Wang and Hanting Wang and Minghui Fang and Jieming Zhu and Zhenhua Dong and Sashuai Zhou and Zehan Wang and Zhou Zhao},\nyear={2024},\nurl={https://openreview.net/forum?id=LRifwkqJEW}\n}",
         "github": "",
         "project": "",
         "reviewers": "sHST;mtj9;8kwo;qU3n;cb3g;LfEr",
@@ -445395,7 +445395,7 @@
         "id": "LwLaFpJpfM",
         "title": "Active Audio Cancellation with Multi-Band Mamba Network",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "A novel deep learning approach for Active Audio Cancellation (AAC) is presented, which surpasses traditional Active Noise Cancellation (ANC) by effectively canceling any audio signal, regardless of its spectral content. We propose, for the first time, a deep learning approach to AAC using a novel multi-band Mamba architecture. This architecture partitions input audio into multiple frequency bands, allowing for precise anti-signal generation and enhanced phase alignment across frequencies, thereby improving overall cancellation performance. Additionally, we introduce an optimization-driven loss function that provides near-optimal supervisory signals for anti-signal generation. Our experimental results demonstrate substantial improvements over existing methods, achieving up to 7.2dB gain in ANC scenarios and up to 6.2dB improvement in AAC for voice audio signals, outperforming existing methods.",
         "keywords": "Active Noise Cancellation;Audio;Speech;Mamba",
@@ -445490,7 +445490,7 @@
             1.5811388300841898
         ],
         "replies_avg": [
-            23,
+            24,
             0
         ],
         "authors#_avg": [
@@ -468183,7 +468183,7 @@
         "id": "N0U6OQRsNu",
         "title": "ATTENDING: Federated Learning with Personalized Attentive Pruning for Heterogeneous Clients",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "Federated Learning (FL) emerges as a novel machine learning paradigm, enabling distributed clients to collaboratively train a global model while eliminating local data transmission.  Despite its advantages, FL faces challenges posed by system and data heterogeneity. System heterogeneity prevents low-end clients from participating in FL with uniform models, while data heterogeneity adversely impacts the learning performance of FL. In this paper, we propose the personalized ATTENtive pruning enabled federateD learnING (ATTENDING) to collectively address these heterogeneity challenges. Specifically, we first design an attention module incorporating spatial and channel attention to enhance the learning performance on heterogeneous data. Subsequently, we introduce the attentive pruning algorithm to generate personalized local models guided by attention scores, aiming to facilitate clients' participation in FL. Finally, we introduce a specific heterogeneous aggregation algorithm integrated with an attention matching mechanism to efficiently aggregate the pruned models. We implement ATTENDING with a real FL platform and the evaluation results show that ATTENDING significantly outperforms the baselines by up to 11.3\\% and reduces the average model footprints by 32\\%. Our code is available at: https://anonymous.4open.science/r/ATTENDING.",
         "keywords": "Federated Learning;Attentive Pruning;Heterogeneous Clients;Non-IID Data.",
@@ -468278,7 +468278,7 @@
             0.7071067811865476
         ],
         "replies_avg": [
-            15,
+            16,
             0
         ],
         "authors#_avg": [
@@ -485139,7 +485139,7 @@
         "id": "NoN4lziOUF",
         "title": "On the Universality of Self-Supervised Representation Learning",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "In this paper, we investigate the characteristics that define a good representation or model. We propose that such a representation or model should possess universality, characterized by: (i) discriminability: performing well on training samples; (ii) generalization: performing well on unseen datasets; and (iii) transferability: performing well on unseen tasks with distribution shifts. Despite its importance, current self-supervised learning (SSL) methods lack explicit modeling of universality, and theoretical analysis remains underexplored. To address these issues, we aim to explore and incorporate universality into SSL. Specifically, we first revisit SSL from a task perspective and find that each mini-batch can be viewed as a multi-class classification task. We then propose that a universal SSL model should achieve: (i) learning universality by minimizing loss across all training samples, and (ii) evaluation universality by learning causally invariant representations that generalize well to unseen datasets and tasks. To quantify this, we introduce a \n$\\sigma$-measurement that assesses the gap between the performance of SSL model and optimal task-specific models. Furthermore, to model universality, we propose the GeSSL framework. It first learns task-specific models by minimizing SSL loss, then incorporates future updates to enhance discriminability, and finally integrates these models to learn from multiple mini-batch tasks. Theoretical and empirical evidence supports the effectiveness of GeSSL.",
         "keywords": "Self-Supervised Learning;Representation Learning;Unsupervised Learning",
@@ -485234,7 +485234,7 @@
             1.469693845669907
         ],
         "replies_avg": [
-            35,
+            36,
             0
         ],
         "authors#_avg": [
@@ -496034,7 +496034,7 @@
             1.118033988749895
         ],
         "replies_avg": [
-            29,
+            30,
             0
         ],
         "authors#_avg": [
@@ -505335,7 +505335,7 @@
         "id": "OioOio3bmx",
         "title": "k-Odd One Clear (k-OOC), a novel GPU kernel that improves quantization accuracy and speed of GPTQ algorithm",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "Large Language Model (LLM) demonstrated tremendously useful applications in nowadays fast-evolving AI driven technology. As the model sizes grow bigger, the demand for bigger and faster GPU is required. Another way to alleviate this issue is by improving the compression of the trained model through quantization so that lower VRAM devices can run. Quantization paradigms like GPTQ, PB-LLM, BiLLM (Hessian based with structural searching)  are successful quantize mechanisms. In this paper, we propose **OOC**, a technique to pick an \"odd\" group to improve the quantization clarity so that the model can have better reasoning capability overall. In addition, we define **Bit Family** ($A^{lim},A^{max}$) to classify compression rate of current and past quantizing techniques, thus providing a more objective way to rank different methodologies in literature. Thirdly, to avoid compromising the quantization speed due to the **scanning** process overhead, we developed a specialized fused GPU kernel (k-OOC) where it can be $9\\times$ faster than the original GPTQ implementation (single-flow mode) and $22\\times$ faster than the naive OOC implementation (double-flow mode) due to the incorporation of techniques called **Row-Flow-Selection Parallel** and **Input Batching**. We measured perplexity of k-OOC (2 bits) with 14 major models like OPT, LLAMA, and Bloom (125M to 70B parameters) and popular datasets ( Wikitext2, C4, and PTB). We managed to improved the perplexity of small model by 8.9\\% and of big model by 4.1\\% compared to the baseline of GPTQ (2 bits).",
         "keywords": "quantization;LLM;GPTQ;BitNet",
@@ -505430,7 +505430,7 @@
             0
         ],
         "replies_avg": [
-            5,
+            6,
             0
         ],
         "authors#_avg": [
@@ -565478,7 +565478,7 @@
             0.5
         ],
         "replies_avg": [
-            23,
+            25,
             0
         ],
         "authors#_avg": [
@@ -640983,7 +640983,7 @@
         "id": "VLdZkq9xsd",
         "title": "Multiple-Frequencies Population-Based Training",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "Reinforcement Learning's high sensitivity to hyperparameters is a source of instability and inefficiency, creating significant challenges for practitioners. Hyperparameter Optimization (HPO) algorithms have been developed to address this issue, among them Population-Based Training (PBT) stands out for its ability to generate hyperparameters schedules instead of fixed configurations. PBT trains a population of agents, each with its own hyperparameters, frequently ranking them and replacing the worst performers with mutations of the best agents. These intermediate selection steps can cause PBT to focus on short-term improvements, leading it to get stuck in local optima and eventually fall behind vanilla Random Search over longer timescales. This paper studies how this greediness issue is connected to the choice of *evolution frequency*, the rate at which the selection is done. We propose Multiple-Frequencies Population-Based Training (MF-PBT), a novel HPO algorithm that addresses greediness by employing sub-populations, each evolving at distinct frequencies. MF-PBT introduces a migration process to transfer information between sub-populations, with an asymmetric design to balance short and long-term optimization. Extensive experiments on the Brax suite demonstrate that MF-PBT improves sample efficiency and long-term performance, even without tuning hyperparameters. Code will be released.",
         "keywords": "Hyperparameter Optimization; Reinforcement Learning; Population-Based Training",
@@ -641078,7 +641078,7 @@
             1.4142135623730951
         ],
         "replies_avg": [
-            20,
+            21,
             0
         ],
         "authors#_avg": [
@@ -645830,7 +645830,7 @@
             0.7071067811865476
         ],
         "replies_avg": [
-            27,
+            28,
             0
         ],
         "authors#_avg": [
@@ -652539,7 +652539,7 @@
         "id": "VtT41Nniu4",
         "title": "GT-Mean Loss: A Simple Yet Effective Solution for Brightness Mismatch in Low-Light Image Enhancement",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "Low-light image enhancement (LLIE) aims to improve the visual quality of images captured under poor lighting conditions. In supervised LLIE tasks, there exists a significant yet often overlooked inconsistency between the overall brightness of an enhanced image and its ground truth counterpart, referred to as brightness mismatch in this study. Brightness mismatch negatively impact supervised LLIE models by misleading model training. However, this issue is largely neglected in current research. In this context, we propose the GT-mean loss, a simple yet effective loss function directly modeling the mean values of images from a probabilistic perspective. The GT-mean loss is flexible, as it extends existing supervised LLIE loss functions into the GT-mean form with minimal additional computational costs. Extensive experiments demonstrate that the incorporation of the GT-mean loss results in consistent performance improvements across various methods and datasets.",
         "keywords": "Low-light image enhancement;loss function;GT-mean",
@@ -652634,7 +652634,7 @@
             1.2
         ],
         "replies_avg": [
-            18,
+            19,
             0
         ],
         "authors#_avg": [
@@ -657818,7 +657818,7 @@
             0.7071067811865476
         ],
         "replies_avg": [
-            17,
+            18,
             0
         ],
         "authors#_avg": [
@@ -687423,7 +687423,7 @@
         "id": "XjSdhzBTMq",
         "title": "Learning to Rank for AutoML: enhancing pipeline selection with ranking information",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "This paper introduces a learning-to-rank (LTR) framework to address the problem of pipeline selection in automated machine learning systems. The traditional approach to AutoML involves learning to predict the performance of various pipelines on a given task based on data acquired from previous tasks (i.e., meta-learning), which can be complex due to the need for different models for each task-specific metric. The proposed framework aims to select the best pipeline based on ranking rather than estimating a target metric, aligning more closely with the ultimate goal of the task (i.e., selecting pipeline candidates in order, from more to least promising). This approach enables more robust, metric-agnostic solutions that are easier to compare using ranking metrics like NDCG and MRR. The paper evaluates LTR strategies on public OpenML datasets, demonstrating a clear advantage for ranking-based methods. Additionally, the integration of LTR with Bayesian optimization and Monte Carlo tree search is explored, leading to improvements in the ranking metrics. Finally, the study found a strong correlation between ranking metrics (e.g., NDCG and MRR) and AutoML metrics, such as the task objective metric and the time to find the best solution, providing insights into how ranking-based methods could enhance AutoML systems.",
         "keywords": "AutoML;Learning-to-Rank;Pipeline selection;Meta-learning;Ranking;Bayesian optimization;Monte Carlo tree search;OpenML datasets;Metric-agnostic;Machine Learning",
@@ -687518,7 +687518,7 @@
             0.4714045207910317
         ],
         "replies_avg": [
-            12,
+            13,
             0
         ],
         "authors#_avg": [
@@ -725565,7 +725565,7 @@
         "aff": "University of Hong Kong;;;Harbin University of Commerce;;Huazhong Agricultural University;;",
         "aff_domain": "eee.hku.hk;;;hrbeu.edu;;hzau.edu.cn;;",
         "position": "PhD student;;;Undergrad student;;Undergrad student;;",
-        "bibtex": "@misc{\nsun2025crossmodalnet,\ntitle={CrossModalNet: Multimodal Medical Segmentation with Guaranteed Cross-Modal Flow and Domain Adaptability},\nauthor={Xiaofei Sun and Ellen Yi-Ge and YANG HAN and Hao Bo Dong and Jiacheng Shi and Chuanqi Shi and Tao Feng and Zhenghan chen},\nyear={2025},\nurl={https://openreview.net/forum?id=ZZVOrId3yN}\n}",
+        "bibtex": "@misc{\nsun2025crossmodalnet,\ntitle={CrossModalNet: Multimodal Medical Segmentation with Guaranteed Cross-Modal Flow and Domain Adaptability},\nauthor={Xiaofei Sun and Ellen Yi-Ge and YANG HAN and Haobo Dong and Jiacheng Shi and Chuanqi Shi and Tao Feng and Zhenghan chen},\nyear={2025},\nurl={https://openreview.net/forum?id=ZZVOrId3yN}\n}",
         "github": "",
         "project": "",
         "reviewers": "W2AE;yiyC;JuCk;ESAR",
@@ -762038,7 +762038,7 @@
             0.7071067811865476
         ],
         "replies_avg": [
-            22,
+            23,
             0
         ],
         "authors#_avg": [
@@ -795302,7 +795302,7 @@
             3.3166247903554
         ],
         "replies_avg": [
-            33,
+            34,
             0
         ],
         "authors#_avg": [
@@ -800270,7 +800270,7 @@
             5.385164807134504
         ],
         "replies_avg": [
-            43,
+            44,
             0
         ],
         "authors#_avg": [
@@ -816686,7 +816686,7 @@
             2.33238075793812
         ],
         "replies_avg": [
-            37,
+            38,
             0
         ],
         "authors#_avg": [
@@ -829551,7 +829551,7 @@
         "id": "eh1fL0zw8o",
         "title": "Large Language and Protein Assistant for Protein-Protein Interactions prediction",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "Predicting the types and affinities of protein-protein interactions (PPIs) is crucial for understanding biological processes and discovering macromolecular drugs. While encoding proteins themselves is essential, PPI networks can also provide rich prior knowledge for these predictive tasks. However, existing methods oversimplify the problem of PPI prediction in a semi-supervised manner when utilizing PPI networks, limiting their practical application. Furthermore, how to effectively use the rich prior knowledge of PPI networks for novel proteins not present in the network remains an unexplored issue. Additionally, due to inflexible architectures, existing methods cannot handle complexes containing an arbitrary number of proteins. To overcome these limitations, we introduce LLaPA (Large Language and Protein Assistant), a multimodal large language model that integrates proteins and PPI networks. LLaPA offers a more rational approach to utilizing PPI networks for PPI prediction and can fully exploit the information of PPI networks for unseen proteins. Through natural language instructions, LLaPA can accept any number of protein sequences and has the potential to perform various protein tasks. Experiments show that LLaPA achieves state-of-the-art performance in multi-label PPI type prediction and is capable of predicting the binding affinity between multiple interacting proteins based on sequence data.",
         "keywords": "Multimodal;LLM;Protein-Protein Interaction;Binding Affinity Prediction",
@@ -829646,7 +829646,7 @@
             0.82915619758885
         ],
         "replies_avg": [
-            32,
+            33,
             0
         ],
         "authors#_avg": [
@@ -851570,7 +851570,7 @@
             1.6393596310755
         ],
         "replies_avg": [
-            25,
+            26,
             0
         ],
         "authors#_avg": [
@@ -917882,7 +917882,7 @@
             1.5
         ],
         "replies_avg": [
-            23,
+            24,
             0
         ],
         "authors#_avg": [
@@ -955047,7 +955047,7 @@
         "id": "kqSmedTcgb",
         "title": "Text-Augmented Multimodal LLMs for Chemical Reaction Condition Recommendation",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "High-throughput reaction condition (RC) screening is fundamental to chemical synthesis. However, current RC screening suffers from laborious and costly trial-and-error workflows. Traditional computer-aided synthesis planning (CASP) tools fail to find suitable RCs due to data sparsity and inadequate reaction representations. Nowadays, large language models (LLMs) are capable of tackling chemistry-related problems, such as molecule design, and chemical logic Q\\&A tasks. However, LLMs have not yet achieved accurate predictions of chemical reaction conditions. Here, we present Chemma-RC, a text-augmented multimodal LLM that responds to task-specific questions by generating answers about reaction conditions. It learns a unified reaction representation via modality alignment from a corpus of reactions and question prompts, molecular structures in SMILES format, and graphical representations of chemical reactions.  We construct a 1.2 million pair-wised Q\\&A instruction dataset to train Chemma-RC and design a projection module for modality alignment. Our experimental results demonstrate that Chemma-RC achieves state-of-the-art performance on two open benchmark datasets and exhibits strong generalization capabilities on out-of-domain (OOD) and High-Throughput Experimentation (HTE) datasets. Chemma-RC has the potential to accelerate high-throughput condition screening in chemical synthesis.",
         "keywords": "Text-augmented;Multimodal LLM;Chemical reaction condition recommendation",
@@ -955142,7 +955142,7 @@
             3.0413812651491097
         ],
         "replies_avg": [
-            34,
+            35,
             0
         ],
         "authors#_avg": [
@@ -956343,7 +956343,7 @@
         "id": "kvBuxFxSLR",
         "title": "Exploring Selective Layer Freezing Strategies in Transformer Fine-Tuning: NLI Classifiers with Sub-3B Parameter Models",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "In recent years, methods that selectively fine-tune or reduce the number of layers in large language models (LLMs) have garnered attention as an efficient alternative to traditional fine-tuning, where all layers are trained. In this paper, we revisit the concept of Layer Freezing, a simple yet effective fine-tuning strategy, and introduce detailed strategies that improve the training efficiency of LLMs by selectively fine-tuning only a portion of the layers. We tested various freezing ratios and positions, and found that by freezing the bottom 25% or 50% of transformer layers during fine-tuning of an LLM with sub 3 billion parameters, we can achieve performance equal to or better than full model fine-tuning and Low-Rank Adaptation (LoRA), while significantly reducing memory usage and training time. Our experiments on natural language inference tasks show that this approach reduces memory consumption by about 30\\% and 50\\%, and improves training speed by 20-30%.",
         "keywords": "LLM;Fine-tuning;Freezing",
@@ -956438,7 +956438,7 @@
             0
         ],
         "replies_avg": [
-            7,
+            8,
             0
         ],
         "authors#_avg": [
@@ -959570,7 +959570,7 @@
             0.8660254037844386
         ],
         "replies_avg": [
-            27,
+            28,
             0
         ],
         "authors#_avg": [
@@ -987434,7 +987434,7 @@
             1.5811388300841898
         ],
         "replies_avg": [
-            41,
+            42,
             0
         ],
         "authors#_avg": [
@@ -1013493,7 +1013493,7 @@
         "aff": ";Sberbank;NATIONAL RESEARCH NUCLEAR UNIVERSITY MEPHI Moscow Engineering Physics Institute;Sber AI Lab;ARTIFICIAL INTELLIGENCE RESEARCH INSTITUTE (AIRI);HSE University;Sberbank",
         "aff_domain": ";sber.ru;phystech.edu;sberbank.ru;airi.net;hse.ru;sberbank.ru",
         "position": ";Researcher;Undergrad student;Principal Researcher;Principal Researcher;Full Professor;Researcher",
-        "bibtex": "@misc{\ndzhambulat2025multimodal,\ntitle={Multimodal Banking Dataset: Understanding Client Needs through Event Sequences},\nauthor={Mollaev Dzhambulat and Alexander Kostin and Postnova Maria and Ivan Karpukhin and Ivan A Kireev and Gleb Gennadjevich Gusev and Andrey Savchenko},\nyear={2025},\nurl={https://openreview.net/forum?id=ns0KIpfQVy}\n}",
+        "bibtex": "@misc{\ndzhambulat2025multimodal,\ntitle={Multimodal Banking Dataset: Understanding Client Needs through Event Sequences},\nauthor={Dzhambulat Mollaev and Alexander Kostin and Postnova Maria and Ivan Karpukhin and Ivan A Kireev and Gleb Gennadjevich Gusev and Andrey Savchenko},\nyear={2025},\nurl={https://openreview.net/forum?id=ns0KIpfQVy}\n}",
         "github": "",
         "project": "",
         "reviewers": "hmLd;PGwK;YTbu;e7p1",
@@ -1047063,7 +1047063,7 @@
         "id": "pRUxNDrfvk",
         "title": "ABAS-RAL: Adaptive BAtch Size using Reinforced Active Learning",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "Active learning reduces annotation costs by selecting the most informative samples, however fixed batch sizes used in traditional methods often lead to inefficient use of resources. We propose Adaptive BAtch Size using Reinforced Active Learning, a novel approach that dynamically adjusts batch sizes based on model uncertainty and performance. By framing the annotation process as a Markov Decision Process, the proposed method employs reinforcement learning to optimize batch size selection, using two distinct policies: one targeting precision and budget, and the other for adapting the batch size based on learning progress. The proposed method is evaluated on both CIFAR-10, CIFAR-100 and MNIST datasets. The performance is measured across multiple metrics, including precision, accuracy, recall, F1-score, and annotation budget. Experimental results demonstrate that the proposed method consistently reduces annotation costs while maintaining or improving performance compared to fixed-batch Active Learning methods, achieving higher sample selection efficiency without compromising model quality.",
         "keywords": "Active learning;Reinforcement Learning;Adaptive Batch Size;Annotation Budget",
@@ -1047158,7 +1047158,7 @@
             2.0615528128088303
         ],
         "replies_avg": [
-            20,
+            21,
             0
         ],
         "authors#_avg": [
@@ -1075886,7 +1075886,7 @@
             0.6324555320336759
         ],
         "replies_avg": [
-            17,
+            20,
             0
         ],
         "authors#_avg": [
@@ -1080129,7 +1080129,7 @@
         "aff": "Carnegie Mellon University;Duquesne University;Carnegie Mellon University;Carnegie Mellon University",
         "aff_domain": "cmu.edu;duq.edu;cmu.edu;cmu.edu",
         "position": "PhD student;Assistant Professor;Researcher;Assistant Professor",
-        "bibtex": "@misc{\nwang2025physicsinformed,\ntitle={Physics-Informed Deep B-Spline Networks},\nauthor={Zhuoyuan Wang and Raffaele Romagnoli and Jasmine Ratchford and yorie nakahira},\nyear={2025},\nurl={https://openreview.net/forum?id=rCvdAVQpAe}\n}",
+        "bibtex": "@misc{\nwang2025physicsinformed,\ntitle={Physics-Informed Deep B-Spline Networks},\nauthor={Zhuoyuan Wang and Raffaele Romagnoli and Jasmine Ratchford and Yorie Nakahira},\nyear={2025},\nurl={https://openreview.net/forum?id=rCvdAVQpAe}\n}",
         "github": "",
         "project": "",
         "reviewers": "sH4h;dWHg;NS4y;KSqP",
@@ -1123622,7 +1123622,7 @@
             1.118033988749895
         ],
         "replies_avg": [
-            22,
+            23,
             0
         ],
         "authors#_avg": [
@@ -1158627,7 +1158627,7 @@
         "id": "uz4QiNHB16",
         "title": "FLAIR: A Foundation Model for Grapheme Recognition in Ancient Scripts with Few-Shot Learning",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "The Indus Valley Civilization (IVC) left behind an undeciphered script, posing a significant challenge to archaeologists and linguists. This paper introduces FLAIR, a few-shot learning approach that aims to establish a foundational model for recognizing and identifying individual graphemes from the limited available Indus script. As a foundational model, FLAIR is designed to be versatile, supporting multiple potential applications in script recognition and beyond. It leverages prototypical networks combined with a modified proposed encoder network for segmentation, ProtoSegment to extract intricate features from the grapheme images. We evaluate FLAIR\u2019s ability to generalize from minimal data using IVC grapheme classification tasks and further experiment with pre-trained Omniglot models for fine-tuning. Additionally, we simulate real-world data scarcity by intentionally restricting training data on the Omniglot dataset. Our experiments demonstrate FLAIR\u2019s accuracy in digitizing and recognizing Indus Valley seal graphemes, outperforming traditional machine learning classification approaches. These results underscore FLAIR's potential not only for the digitization of ancient scripts with limited labeled datasets but also for broader applications where data is scarce. FLAIR\u2019s success in grapheme recognition highlights its promise as a foundational model capable of extending to other undeciphered writing systems, thereby contributing to the integration of classic scientific tools and data-driven approaches.",
         "keywords": "Foundation Model;Few-Shot Learning;Prototypical Networks;Encoder Network;Indus Valley Civilization Script;Omniglot Dataset",
@@ -1158722,7 +1158722,7 @@
             0.0
         ],
         "replies_avg": [
-            10,
+            11,
             0
         ],
         "authors#_avg": [
@@ -1182729,7 +1182729,7 @@
         "aff": "George Mason University",
         "aff_domain": "gmu.edu",
         "position": "PhD student",
-        "bibtex": "@misc{\nraihan2025on,\ntitle={On the Convergence of Symbolic Pattern Forests and Silhouette Coefficients for Robust Time Series Clustering},\nauthor={Md Nishat Raihan},\nyear={2025},\nurl={https://openreview.net/forum?id=w5h443GIGo}\n}",
+        "bibtex": "@misc{\nraihan2025on,\ntitle={On the Convergence of Symbolic Pattern Forests and Silhouette Coefficients for Robust Time Series Clustering},\nauthor={Nishat Raihan},\nyear={2025},\nurl={https://openreview.net/forum?id=w5h443GIGo}\n}",
         "github": "",
         "project": "",
         "reviewers": "gn2N;yRSo;S2jm",
@@ -1193727,7 +1193727,7 @@
         "id": "wZbkQStAXj",
         "title": "PersonaEval: Benchmarking LLMs on Role-Playing Evaluation Tasks",
         "track": "main",
-        "status": "Reject",
+        "status": "Withdraw",
         "tldr": "",
         "abstract": "Role-playing in large language models (LLMs) has become a crucial area of research, enabling models to simulate diverse personas and tailor responses, significantly impacting natural language understanding and human-computer interaction. However, while advanced LLMs like GPT-4 are used to evaluate role-playing methods, their reliability in providing accurate assessments remains uncertain, especially in distinguishing nuanced role-playing characteristics. In this paper, we introduce PersonaEval, a benchmark designed to assess the effectiveness of LLMs in role-playing evaluation tasks. We frame the problem as a classification task to determine whether an LLM evaluator can distinguish between sentences from different levels of expertise based solely on linguistic cues. Using real-world data from the Wired 5 Levels video series\u2014where experts explain concepts to five distinct audiences: a child, a teenager, a college student, a graduate student, and another expert\u2014we design three evaluation settings that correspond to commonly used LLM evaluation approaches: single answer role grading, pairwise role comparison, and reference-guided role grading. These settings aim to capture various aspects of how effectively LLMs evaluate role-playing performance. Our study highlights the limitations of current LLMs in persona evaluation tasks and underscores the need for further research to enhance their evaluation capabilities. We provide a foundation for future work aimed at improving the accuracy and professionalism of LLM evaluators in role-playing contexts.",
         "keywords": "Role-playing;evaluating evaluators",
@@ -1193822,7 +1193822,7 @@
             0.0
         ],
         "replies_avg": [
-            12,
+            13,
             0
         ],
         "authors#_avg": [
@@ -1195874,7 +1195874,7 @@
             0.4330127018922193
         ],
         "replies_avg": [
-            14,
+            15,
             0
         ],
         "authors#_avg": [
@@ -1208618,7 +1208618,7 @@
             2.870540018881465
         ],
         "replies_avg": [
-            41,
+            42,
             0
         ],
         "authors#_avg": [
@@ -1239213,7 +1239213,7 @@
         "aff": ";City University of Hong Kong;City University of Hong Kong;City University of Hong Kong;City University of Hong Kong",
         "aff_domain": ";cityu.edu.hk;cityu.edu.hk;my.cityu.edu.hk;cityu.edu.hk",
         "position": ";PhD student;Postdoc;PhD student;Full Professor",
-        "bibtex": "@misc{\nxu2024a,\ntitle={A Competitive-Cooperative Actor-critic Framework for Reinforcement Learning},\nauthor={Meng XU and Zihao WEN and Xinhong Chen and Zhao Guanyi and Jianping Wang},\nyear={2024},\nurl={https://openreview.net/forum?id=ywHOnGOLb1}\n}",
+        "bibtex": "@misc{\nxu2024a,\ntitle={A Competitive-Cooperative Actor-critic Framework for Reinforcement Learning},\nauthor={Meng XU and Zihao WEN and Xinhong Chen and Guanyi Zhao and Jianping Wang},\nyear={2024},\nurl={https://openreview.net/forum?id=ywHOnGOLb1}\n}",
         "github": "",
         "project": "",
         "reviewers": "UhVU;7ket;yMU6",
@@ -1242854,7 +1242854,7 @@
             1.224744871391589
         ],
         "replies_avg": [
-            23,
+            24,
             0
         ],
         "authors#_avg": [
