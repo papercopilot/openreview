@@ -29,16 +29,23 @@ def parse_arguments():
     parser.add_argument(
         '--root_folder', '-r',
         type=str,
-        default="/home/jingya/projects/papercopilot/logs/openreview/venues/iclr",
+        default="/home/jyang/projects/papercopilot/logs/openreview/venues/iclr",
         help='Root folder containing ICLR review JSON files (e.g., /path/to/iclr)'
+    )
+    
+    parser.add_argument(
+        '--output_folder', '-o',
+        type=str,
+        default="/home/jyang/projects/papercopilot/pub/iclr2026",
+        help='Directory to save analysis results and debug outputs'
     )
     
     # Optional arguments
     parser.add_argument(
         '--year', '-y',
         type=int,
-        default=2024,
-        choices=[2024, 2025],
+        default=2026,
+        choices=[2024, 2025, 2026],
         help='ICLR year to analyze (determines which fields to use)'
     )
     
@@ -116,17 +123,10 @@ def set_global_config(args):
         FIELDS = ["rating", "confidence", "correctness", "technical_novelty"]  # iclr 2024
     elif year == 2025:
         FIELDS = ["rating", "confidence", "soundness", "contribution", "presentation"]  # iclr 2025
+    elif year == 2026:
+        FIELDS = ["rating", "confidence", "soundness", "contribution", "presentation"]  # iclr 2025
     else:
         raise ValueError(f"Year {year} is not supported. Please update the FIELDS variable accordingly.")
-
-
-# year = 2024
-# if year == 2024:
-#     FIELDS = ["rating", "confidence", "correctness", "technical_novelty"] # iclr 2024
-# elif year == 2025:
-#     FIELDS = ["rating", "confidence", "soundness", "contribution", "presentation"] # iclr 2025
-# else:
-#     raise ValueError(f"Year {year} is not supported. Please update the FIELDS variable accordingly.")
 
 class TeeOutput:
     def __init__(self, *streams):
@@ -631,9 +631,12 @@ def full_pipeline(root_folder: str, tracing_threshold: int = 3, debug_folder=Non
     id_to_entries = defaultdict(list)
 
     # Step 1: Load entries grouped by paper ID
+    baddata = ['11092025', '11102025']
     for filename in os.listdir(root_folder):
         if filename.endswith('.json') and filename.startswith(f'iclr{year}'):
             time_code = filename.split('.')[1]
+            if time_code in baddata:
+                continue
             with open(os.path.join(root_folder, filename), 'r') as f:
                 data = json.load(f)
                 for entry in data:
@@ -808,6 +811,7 @@ if __name__ == "__main__":
     
     # Extract configuration from arguments
     root_folder = args.root_folder
+    output_folder = args.output_folder
     tracing_threshold_min = args.tracing_threshold_min
     tracing_threshold_max = args.tracing_threshold_max
     tracing_threshold_save = args.tracing_threshold_save
@@ -836,7 +840,7 @@ if __name__ == "__main__":
     
     # Main analysis pipeline
     for t in range(tracing_threshold_min, tracing_threshold_max):
-        debug_folder = root_folder + f"/footprints/threshold_{t}" if args.debug else None
+        debug_folder = output_folder + f"/footprints/threshold_{t}" if args.debug else None
         if debug_folder:
             os.makedirs(debug_folder, exist_ok=True)
             
@@ -850,9 +854,9 @@ if __name__ == "__main__":
             
     print("\n📊 Generating final summary table...")
     generate_tracing_summary(
-        debug_root=root_folder + "/footprints",
+        debug_root=output_folder + "/footprints",
         thresholds=range(tracing_threshold_min, tracing_threshold_max),
-        output_file=root_folder + "/footprints/tracing_summary.csv"
+        output_file=output_folder + "/footprints/tracing_summary.csv"
     )
     
     def footprint_csv2list(csv_path):
@@ -873,7 +877,7 @@ if __name__ == "__main__":
         
     # loop through records and mark the status for each record that pass the stability test
     # Stability is defined as a reviewer's score in specific dimensions (excluding "rating", the sorting dimension) not changing across snapshots.
-    stability_path = f"{root_folder}/footprints/stable_all_days"
+    stability_path = f"{output_folder}/footprints/stable_all_days"
     stability_tests = os.listdir(stability_path)
     stability_tests = [f.split('_success')[0] for f in stability_tests if f.endswith('.csv') and 'success' in f]
     stability_tests_passed_id = set(stability_tests)
@@ -889,7 +893,7 @@ if __name__ == "__main__":
             meta_data[i]['tracing_score'] = np.inf # marked as unstable
         
     # load the tracing result for unstable records
-    tracing_path = f"{root_folder}/footprints"
+    tracing_path = f"{output_folder}/footprints"
     with open(os.path.join(tracing_path, 'tracing_summary.csv'), 'r') as f:
         tracing_data = list(csv.reader(f))
         
@@ -941,10 +945,7 @@ if __name__ == "__main__":
             meta2save.append(paper)
     # percentage = len(meta2save) / result['total_evaluated'] * 100
     percentage = len(meta2save) / len(meta_data) * 100
-    output_file = f"{root_folder}_threshold{tracing_threshold_save}_{len(meta2save)}_records.json"
-    # with open(output_file, 'w') as f:
-        # json.dump(meta2save, f, indent=4)
-    # print(f"Saved {len(meta2save)} records to {output_file}, with tracing_score <= {tracing_threshold_save}, {percentage:.2f}% in total {result['total_evaluated']} evaluated records")
+    output_file = f"{output_folder}_threshold{tracing_threshold_save}_{len(meta2save)}_records.json"
     print("Done!")
     
     # cleanup
@@ -996,7 +997,7 @@ if __name__ == "__main__":
         meta2save_reviewers.append(paper_new)
         
     # save the meta2save_reviewers to a new file
-    output_file = f"{root_folder}_threshold{tracing_threshold_save}_{len(meta2save_reviewers)}_reviewers.json"
+    output_file = os.path.join(output_folder, f"iclr{args.year}_threshold{tracing_threshold_save}_{len(meta2save_reviewers)}_reviewers.json")
     with open(output_file, 'w') as f:
         json.dump(meta2save_reviewers, f, indent=4)
     print("Done!")
