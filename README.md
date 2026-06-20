@@ -90,7 +90,11 @@ The temporal pipeline builds reviewer-level JSON files named:
 iclrYYYY_threshold<k>_<n>_reviewers.json
 ```
 
-Each derived record has:
+The same derived record can be written in first/last mode or full-sequence
+mode. The snippet below shows one reviewer from the same paper in both
+modes.
+
+With `--first_last_only`:
 
 ```json
 {
@@ -109,13 +113,79 @@ Each derived record has:
 }
 ```
 
-`tracing_score = -1` means the reviewer profile was stable without
-Hungarian tracing; non-negative values indicate the minimum successful
-tracing threshold. Some generated files may contain `Infinity` for
-untraced records, which should be normalized if strict JSON is required.
-By default, score strings such as `"5;6"` store first/last values; with
-`--first_last_only` disabled they store the full semicolon-separated
-trajectory. ICLR 2024 uses `rating`, `confidence`, `correctness`, and
+With `--first_last_only` disabled:
+
+```json
+{
+  "id": "00SnKBGTsz",
+  "title": "DataEnvGym: Data Generation Agents in Teacher Environments with Student Feedback",
+  "tracing_score": 2,
+  "review": {
+    "rVo8": {
+      "rating": "5;5;5;5;5;5;5;5;5;5;5;5;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6;6",
+      "confidence": "4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4;4",
+      "soundness": "2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2;2",
+      "contribution": "3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3",
+      "presentation": "3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3;3"
+    }
+  }
+}
+```
+
+For ICLR 2024/2025, each timestamped paper record stores all reviewer
+scores for that paper at one collection time. Fields such as `rating`,
+`confidence`, `soundness`, and `contribution` follow the same reviewer
+order, and that order is sorted by `rating`. This is enough to describe a
+single snapshot, but not enough to directly build per-reviewer score
+trajectories: if a reviewer changes their rating, their place in the
+rating-sorted list can change in the next snapshot.
+
+The recovery idea is simple: use the non-rating scores as the reviewer's
+fingerprint. `rating` controls the sorting, so a rating change can move a
+reviewer in the list; `confidence`, `soundness`, `contribution`, and the
+other non-rating fields move with that reviewer. The code ignores
+`rating`, matches reviewers by the non-rating fields, and records the
+minimum allowed difference as `tracing_score`.
+
+The toy examples below use `R = rating`, `C = confidence`, and `S =
+soundness`; `[...]` marks the reviewer being traced. The real code uses all
+non-rating dimensions available for that year.
+
+The per-reviewer matching cost is:
+
+```math
+\mathrm{tracing\_score} =
+\begin{cases}
+-1, & \text{if no remapping is needed} \\
+\sum_{d \in D_{\text{non-rating}}} |d_{\text{before}} - d_{\text{after}}|, & \text{otherwise}
+\end{cases}
+```
+
+A larger `tracing_score` means the match required more non-rating mismatch,
+so the recovered reviewer trajectory is less reliable.
+
+| Before | After | `tracing_score` | What changed |
+| --- | --- | --- | --- |
+| `R: 4, [6], 7, 8`<br>`C: 2, [3], 4, 4`<br>`S: 2, [3], 4, 5` | `R: 4, [6], 7, 8`<br>`C: 2, [3], 4, 4`<br>`S: 2, [3], 4, 5` | `unchanged = -1` | Nothing changed, so no remapping was needed. |
+| `R: 4, [6], 7, 8`<br>`C: 2, [3], 4, 4`<br>`S: 2, [3], 4, 5` | `R: 4, 7, 8, [9]`<br>`C: 2, 4, 4, [3]`<br>`S: 2, 4, 5, [3]` | `abs(C: 3-3) + abs(S: 3-3) = 0` | Rating changed and the reviewer moved, but `C/S` still match exactly. |
+| `R: 4, [6], 7, 8`<br>`C: 2, [3], 4, 4`<br>`S: 2, [3], 4, 5` | `R: 4, 7, 8, [9]`<br>`C: 2, 4, 4, [4]`<br>`S: 2, 4, 5, [3]` | `abs(C: 3-4) + abs(S: 3-3) = 1` | Reviewer moved; one non-rating score differs by one point. |
+| `R: 4, [6], 7, 8`<br>`C: 2, [3], 4, 4`<br>`S: 2, [3], 4, 5` | `R: 4, 7, 8, [9]`<br>`C: 2, 4, 4, [4]`<br>`S: 2, 4, 5, [4]` | `abs(C: 3-4) + abs(S: 3-4) = 2` | Reviewer moved; two non-rating scores differ by one point each. |
+| `R: 4, [6], 7, 8`<br>`C: 2, [3], 4, 4`<br>`S: 2, [3], 4, 5` | `R: 4, 7, 8, [9]`<br>`C: 2, 4, 4, [6]`<br>`S: 2, 4, 5, [6]` | `abs(C: 3-6) + abs(S: 3-6) = 6 (>2)` | Positive values above `2` and `Infinity` are kept in the files, but they are not useful as compact interpretation categories. |
+
+Recovery summary, cumulative by maximum allowed `tracing_score`:
+
+| Conference | Total records | `<= 0` | `<= 1` | `<= 2` | Final recovered (`<= 5`) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| ICLR 2024 | 2,611 | 1,378 (52.78%) | 2,217 (84.91%) | 2,537 (97.17%) | 2,610 (99.96%) |
+| ICLR 2025 | 5,659 | 2,344 (41.42%) | 4,205 (74.31%) | 5,224 (92.31%) | 5,657 (99.96%) |
+
+For ICLR 2026, the snapshots also capture the late-November 2025 reviewer
+identity leak and score reset
+([OpenReview note](https://openreview.net/forum?id=uAkexWJ7dW&noteId=ObG5ao5t4e)).
+Score changes across that boundary should be interpreted as the reset
+event, not ordinary reviewer-score movement.
+
+ICLR 2024 uses `rating`, `confidence`, `correctness`, and
 `technical_novelty`; ICLR 2025/2026 use `rating`, `confidence`,
 `soundness`, `contribution`, and `presentation`.
 
