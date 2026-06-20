@@ -164,13 +164,68 @@ The per-reviewer matching cost is:
 A larger `tracing_score` means the match required more non-rating mismatch,
 so the recovered reviewer trajectory is less reliable.
 
-| Before | After | `tracing_score` | What changed |
-| --- | --- | --- | --- |
-| `R: 4, [6], 7, 8`<br>`C: 2, [3], 4, 4`<br>`S: 2, [3], 4, 5` | `R: 4, [6], 7, 8`<br>`C: 2, [3], 4, 4`<br>`S: 2, [3], 4, 5` | `unchanged = -1` | Nothing changed, so no remapping was needed. |
-| `R: 4, [6], 7, 8`<br>`C: 2, [3], 4, 4`<br>`S: 2, [3], 4, 5` | `R: 4, 7, 8, [9]`<br>`C: 2, 4, 4, [3]`<br>`S: 2, 4, 5, [3]` | `abs(C: 3-3) + abs(S: 3-3) = 0` | Rating changed and the reviewer moved, but `C/S` still match exactly. |
-| `R: 4, [6], 7, 8`<br>`C: 2, [3], 4, 4`<br>`S: 2, [3], 4, 5` | `R: 4, 7, 8, [9]`<br>`C: 2, 4, 4, [4]`<br>`S: 2, 4, 5, [3]` | `abs(C: 3-4) + abs(S: 3-3) = 1` | Reviewer moved; one non-rating score differs by one point. |
-| `R: 4, [6], 7, 8`<br>`C: 2, [3], 4, 4`<br>`S: 2, [3], 4, 5` | `R: 4, 7, 8, [9]`<br>`C: 2, 4, 4, [4]`<br>`S: 2, 4, 5, [4]` | `abs(C: 3-4) + abs(S: 3-4) = 2` | Reviewer moved; two non-rating scores differ by one point each. |
-| `R: 4, [6], 7, 8`<br>`C: 2, [3], 4, 4`<br>`S: 2, [3], 4, 5` | `R: 4, 7, 8, [9]`<br>`C: 2, 4, 4, [6]`<br>`S: 2, 4, 5, [6]` | `abs(C: 3-6) + abs(S: 3-6) = 6 (>2)` | Positive values above `2` and `Infinity` are kept in the files, but they are not useful as compact interpretation categories. |
+<table>
+  <thead>
+    <tr>
+      <th width="24%">Before</th>
+      <th width="24%">After</th>
+      <th width="34%"><code>tracing_score</code></th>
+      <th width="18%">What changed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><pre><code>R: 4, [6], 7, 8
+C: 2, [3], 4, 4
+S: 2, [3], 4, 5</code></pre></td>
+      <td><pre><code>R: 4, [6], 7, 8
+C: 2, [3], 4, 4
+S: 2, [3], 4, 5</code></pre></td>
+      <td><code>unchanged = -1</code></td>
+      <td>Nothing changed; no remapping was needed.</td>
+    </tr>
+    <tr>
+      <td><pre><code>R: 4, [6], 7, 8
+C: 2, [3], 4, 4
+S: 2, [3], 4, 5</code></pre></td>
+      <td><pre><code>R: 4, 7, 8, [9]
+C: 2, 4, 4, [3]
+S: 2, 4, 5, [3]</code></pre></td>
+      <td><code>abs(C: 3-3) + abs(S: 3-3) = 0</code></td>
+      <td>Moved by rating; non-rating scores match.</td>
+    </tr>
+    <tr>
+      <td><pre><code>R: 4, [6], 7, 8
+C: 2, [3], 4, 4
+S: 2, [3], 4, 5</code></pre></td>
+      <td><pre><code>R: 4, 7, 8, [9]
+C: 2, 4, 4, [4]
+S: 2, 4, 5, [3]</code></pre></td>
+      <td><code>abs(C: 3-4) + abs(S: 3-3) = 1</code></td>
+      <td>Moved; one non-rating score differs by one point.</td>
+    </tr>
+    <tr>
+      <td><pre><code>R: 4, [6], 7, 8
+C: 2, [3], 4, 4
+S: 2, [3], 4, 5</code></pre></td>
+      <td><pre><code>R: 4, 7, 8, [9]
+C: 2, 4, 4, [4]
+S: 2, 4, 5, [4]</code></pre></td>
+      <td><code>abs(C: 3-4) + abs(S: 3-4) = 2</code></td>
+      <td>Moved; two non-rating scores differ by one point.</td>
+    </tr>
+    <tr>
+      <td><pre><code>R: 4, [6], 7, 8
+C: 2, [3], 4, 4
+S: 2, [3], 4, 5</code></pre></td>
+      <td><pre><code>R: 4, 7, 8, [9]
+C: 2, 4, 4, [6]
+S: 2, 4, 5, [6]</code></pre></td>
+      <td><code>abs(C: 3-6) + abs(S: 3-6) = 6 (&gt;2)</code></td>
+      <td>Larger-difference or unrecovered cases.</td>
+    </tr>
+  </tbody>
+</table>
 
 Recovery summary, cumulative by maximum allowed `tracing_score`:
 
