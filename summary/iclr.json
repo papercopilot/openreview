@@ -1,4 +1,36 @@
 {
+    "2027": {
+        "main": {
+            "src": {
+                "openreview": {
+                    "total": 42818,
+                    "url": "https://openreview.net/group?id=ICLR.cc/2027"
+                }
+            },
+            "name": {
+                "tier_raw": {
+                    "0": "Active",
+                    "1": "Desk Reject",
+                    "2": "Withdraw"
+                },
+                "tier": {
+                    "0": "Active"
+                },
+                "review": {},
+                "area": {}
+            },
+            "sum": {
+                "count": {
+                    "0": 40814,
+                    "1": 1704,
+                    "2": 300
+                },
+                "hist": {}
+            },
+            "hist": {},
+            "tsf": {}
+        }
+    },
     "2026": {
         "main": {
             "hist": {
