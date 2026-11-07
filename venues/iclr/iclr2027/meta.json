@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "snapshots": {
+    "iclr2027.11062026.jsonl": {
+      "papers": 42790,
+      "scored_papers": 40642,
+      "ratings": 125671,
+      "sha256": "15fdf252da1c8885304b90ee2f1894728ae4015106595428474bbdbcb0ed2ba2",
+      "archive": "iclr2027.11062026.jsonl",
+      "started_at": "2026-11-06T16:00:01.433849-08:00",
+      "completed_at": "2026-11-06T16:15:19.446695-08:00",
+      "timezone": "America/Los_Angeles",
+      "conf": "iclr",
+      "year": 2027,
+      "release_started_at": "2026-11-06T06:00:01.748241-08:00"
+    }
+  }
+}
