@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "snapshots": {
+    "iclr2026.11132026.jsonl": {
+      "papers": 22748,
+      "scored_papers": 19771,
+      "ratings": 76670,
+      "sha256": "2814af475a45ce3bf62e55fa4c4a5942a03d91af64f4acf9d81f6df508b5ba22",
+      "archive": "iclr2026.11132026.jsonl",
+      "started_at": "2026-11-13T21:30:56.442042-08:00",
+      "completed_at": "2026-11-13T21:41:03.560949-08:00",
+      "timezone": "America/Los_Angeles",
+      "conf": "iclr",
+      "year": 2026
+    }
+  }
+}
