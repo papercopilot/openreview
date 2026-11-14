@@ -2,3 +2,7 @@ venues/iclr/iclr2027.jsonl filter=lfs diff=lfs merge=lfs -text
 venues/iclr/iclr2027/*.jsonl filter=lfs diff=lfs merge=lfs -text
 
 venues/iclr/iclr2027.init.jsonl filter=lfs diff=lfs merge=lfs -text
+
+venues/iclr/iclr2026.jsonl filter=lfs diff=lfs merge=lfs -text
+
+venues/iclr/iclr2026/iclr2026.11132026.jsonl filter=lfs diff=lfs merge=lfs -text
