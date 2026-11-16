@@ -130,6 +130,19 @@
       "conf": "iclr",
       "year": 2027,
       "release_started_at": "2026-11-06T06:00:01.748241-08:00"
+    },
+    "iclr2027.11162026.jsonl": {
+      "papers": 42790,
+      "scored_papers": 40801,
+      "ratings": 126395,
+      "sha256": "45c7ea65ba23103c44e7daae089a6383da951d52bca90dac86c7e518d8f35f02",
+      "archive": "iclr2027.11162026.jsonl",
+      "started_at": "2026-11-16T00:00:01.112338-08:00",
+      "completed_at": "2026-11-16T00:08:11.633155-08:00",
+      "timezone": "America/Los_Angeles",
+      "conf": "iclr",
+      "year": 2027,
+      "release_started_at": "2026-11-06T06:00:01.748241-08:00"
     }
   }
 }
