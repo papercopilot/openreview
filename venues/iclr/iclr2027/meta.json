@@ -188,6 +188,22 @@
       "missing_paper_ids": [
         "mifD4BYlX5"
       ]
+    },
+    "iclr2027.11202026.jsonl": {
+      "papers": 42789,
+      "scored_papers": 40800,
+      "ratings": 125732,
+      "sha256": "bf517c4f3a673fb61d4317ffb7c253f5fa71fe8075f5e181e421a450fa75823d",
+      "archive": "iclr2027.11202026.jsonl",
+      "started_at": "2026-11-20T12:34:29.890240-08:00",
+      "completed_at": "2026-11-20T12:46:43.623907-08:00",
+      "timezone": "America/Los_Angeles",
+      "conf": "iclr",
+      "year": 2027,
+      "release_started_at": "2026-11-06T06:00:01.748241-08:00",
+      "missing_paper_ids": [
+        "mifD4BYlX5"
+      ]
     }
   }
 }
