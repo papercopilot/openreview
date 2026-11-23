@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "snapshots": {
+    "iclr2024.02292024.jsonl": {
+      "archive": "iclr2024.02292024.jsonl",
+      "publication_date": "2024-02-29",
+      "source_commit": "a78d46b318c0aa9ea88e0ca009e79e24cff2b012",
+      "source_path": "iclr/iclr2024.json",
+      "papers": 7304,
+      "sha256": "89dde8dc560a1c6c08fe72fa532f86da53ad7e386b7cad025d21fa4cc978c805"
+    },
+    "iclr2024.03082024.jsonl": {
+      "archive": "iclr2024.03082024.jsonl",
+      "publication_date": "2024-03-08",
+      "source_commit": "a5f89d4e97d6e4e59622518d4e6631b5ca5421fe",
+      "source_path": "venues/iclr/iclr2024.json",
+      "papers": 7304,
+      "sha256": "1dd77dfad59f274f3dd63a96650e4ef82be5e874e1f6d2261e629dcd4990f6f7"
+    },
+    "iclr2024.03142024.jsonl": {
+      "archive": "iclr2024.03142024.jsonl",
+      "publication_date": "2024-03-14",
+      "source_commit": "cbb695f2ed70f7264ba7f3c55d202089b9075a66",
+      "source_path": "venues/iclr/iclr2024.json",
+      "papers": 7304,
+      "sha256": "389cea81a82e29459f9959ad40584aaa7e62de40cb5e9c02e8e9c601c6592ec4"
+    },
+    "iclr2024.03162024.jsonl": {
+      "archive": "iclr2024.03162024.jsonl",
+      "publication_date": "2024-03-16",
+      "source_commit": "c176a176dbf52bc2588c89434e3ca7b6b9e4b7ae",
+      "source_path": "venues/iclr/iclr2024.json",
+      "papers": 7304,
+      "sha256": "8a2fa5cd79d19ef4941b65268590ce951500d161a31fbaa4147e393e66d74bab"
+    },
+    "iclr2024.04072024.jsonl": {
+      "archive": "iclr2024.04072024.jsonl",
+      "publication_date": "2024-04-07",
+      "source_commit": "97931a8bf502900c8c20e3c7ae622e47b1c48146",
+      "source_path": "venues/iclr/iclr2024.json",
+      "papers": 7404,
+      "sha256": "2538a491075bb326d525c87761828b1690c37968eb00a9fa2692c16cc980ac72"
+    },
+    "iclr2024.04112024.jsonl": {
+      "archive": "iclr2024.04112024.jsonl",
+      "publication_date": "2024-04-11",
+      "source_commit": "63dd40dbf74b2a061c173f0a599934974434d865",
+      "source_path": "venues/iclr/iclr2024.json",
+      "papers": 7404,
+      "sha256": "3bef0dcf67248391ca93770aa6400299ee42956a31b6be6b88659046bbc3434a"
+    },
+    "iclr2024.04162024.jsonl": {
+      "archive": "iclr2024.04162024.jsonl",
+      "publication_date": "2024-04-16",
+      "source_commit": "e8f063b6a18be74479cc5d638b1d6e0f90adb4a3",
+      "source_path": "venues/iclr/iclr2024.json",
+      "papers": 7404,
+      "sha256": "27b6afaf7dd54b5ab427e1ed19d0f67ec5a130378a26168a07e7413ef06b88f1"
+    },
+    "iclr2024.04212024.jsonl": {
+      "archive": "iclr2024.04212024.jsonl",
+      "publication_date": "2024-04-21",
+      "source_commit": "97c535ba20cf2909928992aae9fc4dec6b9b1512",
+      "source_path": "venues/iclr/iclr2024.json",
+      "papers": 7404,
+      "sha256": "10aa196645590396bd5f3330147dccd689f96cd6173c1df090092aa9a5fecfe3"
+    },
+    "iclr2024.06052024.jsonl": {
+      "archive": "iclr2024.06052024.jsonl",
+      "publication_date": "2024-06-05",
+      "source_commit": "46ef24877abef1c6d8afd2bf24128a934c526312",
+      "source_path": "venues/iclr/iclr2024.json",
+      "papers": 7404,
+      "sha256": "127d7e807e918e44ca29cbfa956db8a63df7e3b6497c3fbd262929abca13b194"
+    },
+    "iclr2024.09292024.jsonl": {
+      "archive": "iclr2024.09292024.jsonl",
+      "publication_date": "2024-09-29",
+      "source_commit": "0c4f008718c7f0615f898d6129a01fcb2ce9488e",
+      "source_path": "venues/iclr/iclr2024.json",
+      "papers": 7404,
+      "sha256": "1958212604db81000ef8e64edf4694d5612f598be9a20c8b67002140755be1a4"
+    },
+    "iclr2024.10102024.jsonl": {
+      "archive": "iclr2024.10102024.jsonl",
+      "publication_date": "2024-10-10",
+      "source_commit": "3e6c8b3b8902d3e68795898d78a8e11a274072ad",
+      "source_path": "venues/iclr/iclr2024.json",
+      "papers": 7404,
+      "sha256": "da2841f349aae499034014018d2b61c47af68ae007afeb4dd69d1aa197fa8c0f"
+    },
+    "iclr2024.10292024.jsonl": {
+      "archive": "iclr2024.10292024.jsonl",
+      "publication_date": "2024-10-29",
+      "source_commit": "6d1562f199372f83cee48e18422aa3d943524ded",
+      "source_path": "venues/iclr/iclr2024.json",
+      "papers": 7404,
+      "sha256": "5aed3643df09b1595bb8ce71a00cb7589425e5004efe634b78888ee1f8fcb681"
+    },
+    "iclr2024.02062025.jsonl": {
+      "archive": "iclr2024.02062025.jsonl",
+      "publication_date": "2025-02-06",
+      "source_commit": "7c6f1493d9831d3a28b000b299739cc7ce7195db",
+      "source_path": "venues/iclr/iclr2024.json",
+      "papers": 7404,
+      "sha256": "79d666379d2d2eec7cf2a9097addcaa589eb52f96399fdcec8740b4258bf245c"
+    },
+    "iclr2024.04242025.jsonl": {
+      "archive": "iclr2024.04242025.jsonl",
+      "publication_date": "2025-04-24",
+      "source_commit": "b5a584d367c19417917a6090cd621971aeae3d15",
+      "source_path": "venues/iclr/iclr2024.json",
+      "papers": 7404,
+      "sha256": "8f4aee87c3ab757b1d07ec11a6ade779ddbfca4ffcfca8a6339e99d0df0d6293"
+    },
+    "iclr2024.05182025.jsonl": {
+      "archive": "iclr2024.05182025.jsonl",
+      "publication_date": "2025-05-18",
+      "source_commit": "44bf9fe102700e7f360285eeb9c718f38cd06f12",
+      "source_path": "venues/iclr/iclr2024.json",
+      "papers": 7404,
+      "sha256": "8d86fae3f715537ff7f7f39cf698d7f6f5806e2fb4ba73286586d7c80bfe464f"
+    },
+    "iclr2024.05212025.jsonl": {
+      "archive": "iclr2024.05212025.jsonl",
+      "publication_date": "2025-05-21",
+      "source_commit": "e5e8e6abee368c0a437f11ea705e33144232239e",
+      "source_path": "venues/iclr/iclr2024.json",
+      "papers": 7404,
+      "sha256": "a0adb0b06263023fb077d11dd9c58f7806ba24802278e1176aff7327be17f107"
+    },
+    "iclr2024.04282026.jsonl": {
+      "archive": "iclr2024.04282026.jsonl",
+      "publication_date": "2026-04-28",
+      "source_commit": "b63151499dbee948b06952ed30c230d1b937c90a",
+      "source_path": "venues/iclr/iclr2024.jsonl",
+      "papers": 8305,
+      "sha256": "5f40d2c5672fd1a5f2d952a4bd7eef7a6d7feaa7504d8a705a4ea1a8735d9443"
+    }
+  }
+}
