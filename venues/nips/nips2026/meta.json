@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "snapshots": {
+    "nips2026.11282026.jsonl": {
+      "papers": 9387,
+      "scored_papers": 9218,
+      "ratings": 28839,
+      "sha256": "a9bd74b0f6417900fe415b5e6ad489d9262dca0a47ef8e0459269e77ee47f2d2",
+      "archive": "nips2026.11282026.jsonl",
+      "started_at": "2026-11-28T10:47:30-08:00",
+      "completed_at": "2026-11-28T10:49:44.591974-08:00",
+      "timezone": "America/Los_Angeles",
+      "conf": "nips",
+      "year": 2026
+    }
+  }
+}
